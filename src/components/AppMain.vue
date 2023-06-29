@@ -70,55 +70,63 @@ export default {
         </section>
         <!-- Section Links -->
         <section id="links">
-            <div class="col">
-                <!-- Links DC Comics -->
-                <ul>
+            <!-- BG Logo DC -->
+            <div class="container-links">
+                <div class="logo">
+                    <img src="../assets/img/dc-logo-bg.png" alt="Logo">
+                </div>
+                <div class="col">
+                    <!-- Links DC Comics -->
                     <h2>DC COMICS</h2>
-                    <li>Characters</li>
-                    <li>Comics</li>
-                    <li>Movies</li>
-                    <li>TV</li>
-                    <li>Games</li>
-                    <li>Videos</li>
-                    <li>News</li>
-                </ul>
-
-                <!-- Links Shop -->
-                <ul>
+                    <ul>
+                        <li><a href="#">Characters</a></li>
+                        <li><a href="#">Comics</a></li>
+                        <li><a href="#">Movies</a></li>
+                        <li><a href="#">TV</a></li>
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">Videos</a></li>
+                        <li><a href="#">News</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <!-- Links Shop -->
                     <h2>SHOP</h2>
-                    <li>Shop DC</li>
-                    <li>Shop DC Collection</li>
-                </ul>
-            </div>
-            <div class="col">
-                <!-- Links DC -->
-                <ul>
+                    <ul>
+                        <li><a href="#">Shop DC</a></li>
+                        <li><a href="#">Shop DC Collection</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <!-- Links DC -->
                     <h2>DC</h2>
-                    <li>Terms Of Use</li>
-                    <li>Privacy Policy (New)</li>
-                    <li>Ad Choiches</li>
-                    <li>Advertasing</li>
-                    <li>Jobs</li>
-                    <li>Subscriptions</li>
-                    <li>Talent Workshops</li>
-                    <li>CPSC Certificates</li>
-                    <li>Ratings</li>
-                    <li>Shop Help</li>
-                    <li>Contact Us</li>
-                </ul>
-            </div>
-            <div class="col">
-                <!-- Links DC Sites -->
-                <ul>
+                    <ul>
+                        <li><a href="#">Terms Of Use</a></li>
+                        <li><a href="#">Privacy Policy (New)</a></li>
+                        <li><a href="#">Ad Choices</a></li>
+                        <li><a href="#">Advertising</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Subscriptions</a></li>
+                        <li><a href="#">Talent Workshops</a></li>
+                        <li><a href="#">CPSC Certificates</a></li>
+                        <li><a href="#">Ratings</a></li>
+                        <li><a href="#">Shop Help</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <!-- Links DC Sites -->
                     <h2>SITES</h2>
-                    <li>DC</li>
-                    <li>MAD Magazine</li>
-                    <li>DC Kids</li>
-                    <li>DC Universe</li>
-                    <li>DC Power Visa</li>
-                </ul>
+                    <ul>
+                        <li><a href="#">DC</a></li>
+                        <li><a href="#">MAD Magazine</a></li>
+                        <li><a href="#">DC Kids</a></li>
+                        <li><a href="#">DC Universe</a></li>
+                        <li><a href="#">DC Power Visa</a></li>
+                    </ul>
+                </div>
             </div>
         </section>
+
     </main>
 </template>
 
@@ -134,7 +142,7 @@ export default {
 #info-shop {
     background-color: #0182f9;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -145,12 +153,12 @@ export default {
 #info-shop li {
     display: flex;
     align-items: center;
-    margin-left: 20px;
+    margin-left: 100px;
 }
 
 #info-shop img {
-    max-width: 70px;
-    padding: 30px 10px;
+    max-width: 80px;
+    padding: 20px 10px;
 }
 
 h2 {
@@ -163,6 +171,15 @@ h2 {
 #links {
     display: flex;
     background-image: url(../assets/img/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container-links {
+    display: flex;
+    margin-left: 250px;
+    margin-top: 30px;
 }
 
 #links .col {
@@ -177,14 +194,33 @@ h2 {
     margin-bottom: 10px;
     padding: 0px;
     margin-left: 10px;
+    color: white;
 }
-
 
 #links ul {
     display: flex;
     flex-direction: column;
-    margin-left: 200px;
     margin-top: 20px;
+    margin-bottom: 10px;
     color: white;
+    font-size: 14px;
+}
+
+#links li {
+    padding: 2px 10px;
+}
+
+#links a {
+    color: grey;
+}
+
+.logo {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.logo img {
+    width: 500px;
 }
 </style>
