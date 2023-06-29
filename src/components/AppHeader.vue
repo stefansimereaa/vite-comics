@@ -60,10 +60,8 @@ export default {
     },
     methods: {
         handleLinkClick(item) {
-            // Imposta la proprietà "current" dell'oggetto cliccato su "true"
+            //Modifica nella navbar le a se cliccate
             item.current = true;
-
-            // Reimposta la proprietà "current" di tutti gli altri oggetti su "false"
             this.data.forEach((i) => {
                 if (i !== item) {
                     i.current = false;

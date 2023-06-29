@@ -8,5 +8,12 @@ export default {
 }
 </script>
 
-<template></template>
+<template>
+    <!-- Footer -->
+    <footer>
+        <section id="socials-about-us">
+
+        </section>
+    </footer>
+</template>
 <style></style>
