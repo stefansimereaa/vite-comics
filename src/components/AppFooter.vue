@@ -26,12 +26,8 @@ export default {
         </section>
     </footer>
 </template>
-<style>
-footer {
-    background-color: #1c1c1c;
-    z-index: 1;
-    position: relative;
-}
+<style lang="scss">
+@import '../assets/scss/style.scss';
 
 #socials-about-us {
     display: flex;
@@ -57,9 +53,5 @@ footer {
     color: blue;
     margin-right: 10px;
     padding: 20px;
-}
-
-.socials-links img {
-    margin-right: 10px;
 }
 </style>

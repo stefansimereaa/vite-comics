@@ -88,7 +88,9 @@ export default {
     </header>
 </template>
 
-<style>
+<style lang="scss">
+@import '../assets/scss/style.scss';
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Open+Sans+Condensed:wght@700&display=swap');
 
 /* Header */
@@ -101,27 +103,6 @@ nav {
     justify-content: space-around;
     align-items: center;
     margin-top: 10px
-}
-
-/* Generics */
-body {
-    font-family: 'Open Sans', 'Open Sans Condensed', sans-serif;
-}
-
-/* Utilities */
-ul {
-    list-style-type: none;
-    display: flex;
-}
-
-ul li {
-    padding: 0px 10px;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    position: relative;
 }
 
 a {

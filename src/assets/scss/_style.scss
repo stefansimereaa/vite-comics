@@ -1,0 +1,62 @@
+@use '../scss/_mixins.scss';
+@import '../scss/_vars.scss';
+@import '../scss/_mixins.scss';
+
+
+/* Generics */
+body {
+    font-family: 'Open Sans', 'Open Sans Condensed', sans-serif;
+}
+
+/* Utilities */
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+ul li {
+    padding: 0px 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+/* Section Content */
+#content {
+    background-color: $bgContent;
+    color: white;
+}
+/* Section Info Shop*/ 
+#info-shop {
+    background-color: $bgShop ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Section Links - BG Logo-*/
+.logo {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.logo img {
+    width: 500px;
+}
+
+
+/* Footer */
+footer {
+    background-color: $bgContent;
+    z-index: 1;
+    position: relative;
+}
+
+.socials-links img {
+    margin-right: 10px;
+}
+

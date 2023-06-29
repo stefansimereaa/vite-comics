@@ -131,21 +131,11 @@ export default {
     </main>
 </template>
 
-<style>
-/* Section Content */
-#content {
-    background-color: #1c1c1c;
-    color: white;
-}
+<style lang="scss">
+@import '../assets/scss/style.scss';
 
 
 /* Section Info Shop */
-#info-shop {
-    background-color: #0182f9;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 
 #info-shop a {
     color: white;
@@ -213,15 +203,5 @@ h2 {
 
 #links a {
     color: grey;
-}
-
-.logo {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-}
-
-.logo img {
-    width: 500px;
 }
 </style>
