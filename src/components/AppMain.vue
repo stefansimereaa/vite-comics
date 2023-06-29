@@ -50,7 +50,6 @@ export default {
 };
 </script>
 
-
 <template>
     <main>
         <!-- Section Content -->
@@ -62,7 +61,7 @@ export default {
             <ul>
                 <li v-for="(image, index) in images" :key="index">
                     <figure>
-                        <img :src="imagePath(image)" :alt="getAltText(image)">
+                        <img :src="image" :alt="getAltText(image)">
                     </figure>
                     <a :href="getImageURL(image)">{{ getLinkText(image) }}</a>
                 </li>
@@ -70,31 +69,33 @@ export default {
         </section>
         <!-- Section Links -->
         <section id="links">
-            <!-- BG Logo DC -->
             <div class="container-links">
+                <!-- BG Logo DC -->
                 <div class="logo">
                     <img src="../assets/img/dc-logo-bg.png" alt="Logo">
                 </div>
                 <div class="col">
-                    <!-- Links DC Comics -->
-                    <h2>DC COMICS</h2>
-                    <ul>
-                        <li><a href="#">Characters</a></li>
-                        <li><a href="#">Comics</a></li>
-                        <li><a href="#">Movies</a></li>
-                        <li><a href="#">TV</a></li>
-                        <li><a href="#">Games</a></li>
-                        <li><a href="#">Videos</a></li>
-                        <li><a href="#">News</a></li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <!-- Links Shop -->
-                    <h2>SHOP</h2>
-                    <ul>
-                        <li><a href="#">Shop DC</a></li>
-                        <li><a href="#">Shop DC Collection</a></li>
-                    </ul>
+                    <div class="col">
+                        <!-- Links DC Comics -->
+                        <h2>DC COMICS</h2>
+                        <ul>
+                            <li><a href="#">Characters</a></li>
+                            <li><a href="#">Comics</a></li>
+                            <li><a href="#">Movies</a></li>
+                            <li><a href="#">TV</a></li>
+                            <li><a href="#">Games</a></li>
+                            <li><a href="#">Videos</a></li>
+                            <li><a href="#">News</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <!-- Links Shop -->
+                        <h2>SHOP</h2>
+                        <ul>
+                            <li><a href="#">Shop DC</a></li>
+                            <li><a href="#">Shop DC Collection</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col">
                     <!-- Links DC -->
