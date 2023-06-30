@@ -46,22 +46,41 @@ export default {
                 return image;
             };
         }
+    },
+    props: {
+        products: Array
     }
 };
 </script>
 
 <template>
     <main>
+        <!-- Section Jumbotron -->
+        <section id="jumbotron">
+            <div class="container-jumbo"></div>
+        </section>
         <!-- Section Content -->
         <section id="content">
-            <h2><i class="fa-solid fa-arrow-right"></i> Content goes here <i class="fa-solid fa-arrow-left"></i></h2>
+            <div id="btn-container">
+                <button class="btn-load">CURRENT SERIES</button>
+            </div>
+            <div class="card-container">
+                <div class="card" v-for="product in products" :key="product.id">
+                    <figure>
+                        <img :src="product.thumb" alt="Thumbnail">
+                    </figure>
+                    <h3>{{ product.series }}</h3>
+                </div>
+                <button class="btn-load">Load More</button>
+            </div>
         </section>
+
         <!-- Section Info Shop -->
         <section id="info-shop">
             <ul>
                 <li v-for="(image, index) in images" :key="index">
                     <figure>
-                        <img :src="image" :alt="getAltText(image)">
+                        <img :src="imagePath(image)" :alt="getAltText(image)">
                     </figure>
                     <a :href="getImageURL(image)">{{ getLinkText(image) }}</a>
                 </li>
@@ -133,6 +152,78 @@ export default {
 
 <style lang="scss">
 @import '../assets/scss/style.scss';
+@import '../assets/scss/vars';
+
+/* Section Jumbotron */
+#jumbotron {
+    height: 400px;
+    border: 2px solid black;
+}
+
+#jumbotron .container-jumbo {
+    height: 100%;
+    background-image: url(../assets/img/jumbotron.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+/* Section Content */
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.card {
+    width: calc(100% / 6);
+    height: 150px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.card img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    object-position: top center;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 15px;
+}
+
+.btn-load {
+    background-color: $bgShop;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 200px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#btn-container {
+    position: absolute;
+    top: -90px;
+    left: 15%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
 
 
 /* Section Info Shop */

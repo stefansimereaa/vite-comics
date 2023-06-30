@@ -38,7 +38,7 @@ export default {
 
 .sign-in-btn button {
     background-color: transparent;
-    border: 2px solid blue;
+    border: 2px solid $bgShop;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;

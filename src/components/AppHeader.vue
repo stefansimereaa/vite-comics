@@ -95,7 +95,7 @@ export default {
 
 /* Header */
 header {
-    height: 150px;
+    height: 120px;
 }
 
 nav {
